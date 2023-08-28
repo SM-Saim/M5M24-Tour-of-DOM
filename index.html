@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour to DOM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .fruits-section li {
+        color: rgb(10, 179, 231);
+      }
+      li {
+        color: crimson;
+      }
+      #Drinks {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Welcome to DOM.</h1></header>
+    <main id="main-container">
+      <section>
+        <h1>My awsome DOM:</h1>
+        <ul>
+          <li>DOM DOM DoM</li>
+          <li>We need to know dom</li>
+          <li>DOM DOM DoM</li>
+          <li>We need to know dom</li>
+        </ul>
+      </section>
+
+      <section class="fruits-section">
+        <h1 id="fruits">Avaiable Fruits</h1>
+        <ul>
+          <li class="frts">Apple</li>
+          <li class="frts">Bananna</li>
+          <li class="frts">Orange</li>
+          <li>Mango</li>
+        </ul>
+      </section>
+      <section id="section3" class="font">
+        <h1 id="Drinks" class="values bd-bg potaka">Avaiable drinks</h1>
+        <ul id="coldDrinks">
+          <li>Deu</li>
+          <li>7up</li>
+          <li>Coke</li>
+          <li>Lemo</li>
+        </ul>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleInJS.js"></script>
+
+    <script>
+      const liColection = document.getElementsByTagName("li");
+      //   console.log(liColection);
+      for (let collection of liColection) {
+        // console.log(collection.innerText);
+      }
+      // Option-1: getElementsByTagName()
+      const heading = document.getElementsByTagName("h1");
+      for (const H of heading) {
+        // console.log(H.innerText);
+      }
+
+      // Option-2: getElementById()
+      const singleValue = document.getElementById("Drinks");
+      Drinks.innerText = "Inner text is chenged with JS";
+
+      // Option-3: getElementsByClassName()
+      const someFruits = document.getElementsByClassName("frts");
+      for (const fol of someFruits) {
+        // console.log(fol.innerText);
+      }
+
+      //Option-4: querySelectorAll : mane eta onekta get elementClassName er moto, kintu ekta nidristo section er item gula ami jodi paite chai tokon amra eta use korbo.
+      const values = document.querySelectorAll(".fruits-section li");
+      for (const splitValues of values) {
+        // console.log(splitValues.innerText);
+      }
+      //Option-5: querySelector: eta onek ta getElementById er moto.
+      const value = document.querySelector(".fruits-section li");
+      // console.log(value.innerText);
+    </script>
+  </body>
+</html>

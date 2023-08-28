@@ -1,0 +1,12 @@
+h1 {
+  color: rgb(80, 80, 184);
+}
+h2 {
+  color: darkcyan;
+}
+.text-alignment {
+  text-align: center;
+}
+.font {
+  font-size: 2em;
+}
